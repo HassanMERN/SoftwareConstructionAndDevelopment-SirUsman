@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+
+	function Main()
+	{
+		
+	    var l = document.getElementById('lnkDeleteMe');
+	    var h = document.getElementById('1');
+	    h.onclick = function () {
+	        var f = document.getElementById('frm');
+	        f.removeChild(this.parentNode);
+	    }
+		l.onclick = function(){
+			var cont = document.getElementById('container');
+			cont.removeChild(this);
+		};
+	
+		var p = document.getElementById('lnkMyParent');
+		p.onclick = function(){
+			var f = document.getElementById('frm');			
+			//remove 'container' div from 'form'
+			f.removeChild(this.parentNode);
+		};
+		
+	}
+	
+	
+	
+</script>
+
+</head>
+<body onload="return Main();">
+	
+	<h1 > How to remove an element from page </h1>
+	
+	<form id="frm" >
+		
+		<div id="container" style="border:solid 1px red">
+			<a href="#" id="lnkDeleteMe">Delete Me </a>
+			<br>
+			<a href="#" id="lnkMyParent">Delete My Parent </a>	
+            <a href="#" id="1">hh </a>		
+		</div>
+       
+	</form
+
+</body>
+</html>
